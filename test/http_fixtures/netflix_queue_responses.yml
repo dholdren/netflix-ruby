@@ -1,0 +1,1171 @@
+nuid_one:
+  get:
+    body: |
+      {"queue": {
+        "link": [
+          {
+            "href": "http://api.netflix.com/users/nuid_one/queues/disc/available",
+            "rel": "http://schemas.netflix.com/queues.available",
+            "title": "available queue"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_one/queues/disc/saved",
+            "rel": "http://schemas.netflix.com/queues.saved",
+            "title": "saved queue"
+          }
+        ],
+        "results_per_page": "3",
+        "url_template": "http://api.netflix.com/users/nuid_one/queues/disc?{-join|&|sort|start_index|max_results}",
+        "start_index": "0",
+        "etag": "115673854498",
+        "number_of_results": "3",
+        "queue_item": [
+          {
+            "average_rating": "3.4",
+            "box_art": {
+              "large": "http://cdn-2.nflximg.com/us/boxshots/large/70167072.jpg",
+              "small": "http://cdn-2.nflximg.com/us/boxshots/tiny/70167072.jpg",
+              "medium": "http://cdn-2.nflximg.com/us/boxshots/small/70167072.jpg"
+            },
+            "category": [
+              {
+                "term": "available now",
+                "content": "Available Now",
+                "scheme": "http://api.netflix.com/categories/queue_availability",
+                "label": "available now"
+              },
+              {
+                "term": "Blu-ray",
+                "scheme": "http://api.netflix.com/categories/title_formats",
+                "label": "Blu-ray"
+              },
+              {
+                "term": "PG-13",
+                "scheme": "http://api.netflix.com/categories/mpaa_ratings",
+                "label": "PG-13"
+              },
+              {
+                "term": "Comedy",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Comedy"
+              },
+              {
+                "term": "Romantic Comedies",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Romantic Comedies"
+              }
+            ],
+            "updated": "1311530716",
+            "id": "http://api.netflix.com/users/nuid_one/queues/disc/available/1/70167072",
+            "link": [
+              {
+                "href": "http://api.netflix.com/users/nuid_one/queues/disc/available",
+                "rel": "http://schemas.netflix.com/queues.available",
+                "title": "available queue"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072",
+                "rel": "http://schemas.netflix.com/catalog/title",
+                "title": "Arthur"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072/synopsis",
+                "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+                "title": "synopsis"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072/cast",
+                "rel": "http://schemas.netflix.com/catalog/people.cast",
+                "title": "cast"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072/directors",
+                "rel": "http://schemas.netflix.com/catalog/people.directors",
+                "title": "directors"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072/format_availability",
+                "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+                "title": "formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072/screen_formats",
+                "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+                "title": "screen formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072/languages_and_audio",
+                "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+                "title": "languages and audio"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072/similars",
+                "rel": "http://schemas.netflix.com/catalog/titles.similars",
+                "title": "similars"
+              },
+              {
+                "href": "http://www.netflix.com/Movie/Arthur/70167072",
+                "rel": "alternate",
+                "title": "web page"
+              }
+            ],
+            "position": "1",
+            "runtime": "6600",
+            "title": {
+              "regular": "Arthur",
+              "short": "Arthur"
+            },
+            "release_year": "2011"
+          },
+          {
+            "average_rating": "3.3",
+            "box_art": {
+              "large": "http://cdn-6.nflximg.com/us/boxshots/large/70142826.jpg",
+              "small": "http://cdn-6.nflximg.com/us/boxshots/tiny/70142826.jpg",
+              "medium": "http://cdn-6.nflximg.com/us/boxshots/small/70142826.jpg"
+            },
+            "category": [
+              {
+                "term": "available now",
+                "content": "Available Now",
+                "scheme": "http://api.netflix.com/categories/queue_availability",
+                "label": "available now"
+              },
+              {
+                "term": "Blu-ray",
+                "scheme": "http://api.netflix.com/categories/title_formats",
+                "label": "Blu-ray"
+              },
+              {
+                "term": "R",
+                "scheme": "http://api.netflix.com/categories/mpaa_ratings",
+                "label": "R"
+              },
+              {
+                "term": "Action & Adventure",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Action & Adventure"
+              },
+              {
+                "term": "Action Thrillers",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Action Thrillers"
+              },
+              {
+                "term": "Adventures",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Adventures"
+              }
+            ],
+            "updated": "1309976644",
+            "id": "http://api.netflix.com/users/nuid_one/queues/disc/available/2/70142826",
+            "link": [
+              {
+                "href": "http://api.netflix.com/users/nuid_one/queues/disc/available",
+                "rel": "http://schemas.netflix.com/queues.available",
+                "title": "available queue"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70142826",
+                "rel": "http://schemas.netflix.com/catalog/title",
+                "title": "Sanctum"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70142826/synopsis",
+                "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+                "title": "synopsis"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70142826/cast",
+                "rel": "http://schemas.netflix.com/catalog/people.cast",
+                "title": "cast"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70142826/directors",
+                "rel": "http://schemas.netflix.com/catalog/people.directors",
+                "title": "directors"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70142826/format_availability",
+                "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+                "title": "formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70142826/screen_formats",
+                "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+                "title": "screen formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70142826/languages_and_audio",
+                "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+                "title": "languages and audio"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70142826/similars",
+                "rel": "http://schemas.netflix.com/catalog/titles.similars",
+                "title": "similars"
+              },
+              {
+                "href": "http://www.netflix.com/Movie/Sanctum/70142826",
+                "rel": "alternate",
+                "title": "web page"
+              }
+            ],
+            "position": "2",
+            "runtime": "6540",
+            "title": {
+              "regular": "Sanctum",
+              "short": "Sanctum"
+            },
+            "release_year": "2011"
+          },
+          {
+            "average_rating": "2.9",
+            "box_art": {
+              "large": "http://cdn-8.nflximg.com/us/boxshots/large/70108988.jpg",
+              "small": "http://cdn-8.nflximg.com/us/boxshots/tiny/70108988.jpg",
+              "medium": "http://cdn-8.nflximg.com/us/boxshots/small/70108988.jpg"
+            },
+            "category": [
+              {
+                "term": "available now",
+                "content": "Available Now",
+                "scheme": "http://api.netflix.com/categories/queue_availability",
+                "label": "available now"
+              },
+              {
+                "term": "Blu-ray",
+                "scheme": "http://api.netflix.com/categories/title_formats",
+                "label": "Blu-ray"
+              },
+              {
+                "term": "PG",
+                "scheme": "http://api.netflix.com/categories/mpaa_ratings",
+                "label": "PG"
+              },
+              {
+                "term": "Sci-Fi & Fantasy",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Sci-Fi & Fantasy"
+              },
+              {
+                "term": "Family Sci-Fi & Fantasy",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Family Sci-Fi & Fantasy"
+              },
+              {
+                "term": "Book Characters",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Book Characters"
+              }
+            ],
+            "updated": "1276959724",
+            "id": "http://api.netflix.com/users/nuid_one/queues/disc/available/3/70108988",
+            "link": [
+              {
+                "href": "http://api.netflix.com/users/nuid_one/queues/disc/available",
+                "rel": "http://schemas.netflix.com/queues.available",
+                "title": "available queue"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70108988",
+                "rel": "http://schemas.netflix.com/catalog/title",
+                "title": "Where the Wild Things Are"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70108988/synopsis",
+                "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+                "title": "synopsis"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70108988/cast",
+                "rel": "http://schemas.netflix.com/catalog/people.cast",
+                "title": "cast"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70108988/directors",
+                "rel": "http://schemas.netflix.com/catalog/people.directors",
+                "title": "directors"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70108988/format_availability",
+                "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+                "title": "formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70108988/screen_formats",
+                "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+                "title": "screen formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70108988/languages_and_audio",
+                "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+                "title": "languages and audio"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70108988/similars",
+                "rel": "http://schemas.netflix.com/catalog/titles.similars",
+                "title": "similars"
+              },
+              {
+                "href": "http://www.netflix.com/Movie/Where_the_Wild_Things_Are/70108988",
+                "rel": "alternate",
+                "title": "web page"
+              }
+            ],
+            "position": "3",
+            "runtime": "5640",
+            "title": {
+              "regular": "Where the Wild Things Are",
+              "short": "Where the Wild Things Are"
+            },
+            "release_year": "2009"
+          }
+        ]
+      }}
+  post:
+    body:
+  delete:
+    body: |
+      {"status": {
+        "message": "Title deleted from queue",
+        "status_code": 200
+      }}
+    
+
+nuid_sub1:
+  get:
+    body: |
+      {"queue": {
+        "link": [
+          {
+            "href": "http://api.netflix.com/users/nuid_sub1/queues/disc/available",
+            "rel": "http://schemas.netflix.com/queues.available",
+            "title": "available queue"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub1/queues/disc/saved",
+            "rel": "http://schemas.netflix.com/queues.saved",
+            "title": "saved queue"
+          }
+        ],
+        "results_per_page": "3",
+        "url_template": "http://api.netflix.com/users/nuid_sub1/queues/disc?{-join|&|sort|start_index|max_results}",
+        "start_index": "0",
+        "etag": "115673854498",
+        "number_of_results": "3",
+        "queue_item": [
+          {
+            "average_rating": "3.7",
+            "box_art": {
+              "large": "http://cdn-3.nflximg.com/us/boxshots/large/70071613.jpg",
+              "small": "http://cdn-3.nflximg.com/us/boxshots/tiny/70071613.jpg",
+              "medium": "http://cdn-3.nflximg.com/us/boxshots/small/70071613.jpg"
+            },
+            "category": [
+              {
+                "term": "available now",
+                "content": "Available Now",
+                "scheme": "http://api.netflix.com/categories/queue_availability",
+                "label": "available now"
+              },
+              {
+                "term": "Blu-ray",
+                "scheme": "http://api.netflix.com/categories/title_formats",
+                "label": "Blu-ray"
+              },
+              {
+                "term": "R",
+                "scheme": "http://api.netflix.com/categories/mpaa_ratings",
+                "label": "R"
+              },
+              {
+                "term": "Thrillers",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Thrillers"
+              },
+              {
+                "term": "Crime Thrillers",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Crime Thrillers"
+              },
+              {
+                "term": "Suspense",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Suspense"
+              },
+              {
+                "term": "Dramas Based on Contemporary Literature",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Dramas Based on Contemporary Literature"
+              },
+              {
+                "term": "Dramas Based on the Book",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Dramas Based on the Book"
+              }
+            ],
+            "updated": "1276960028",
+            "id": "http://api.netflix.com/users/nuid_sub1/queues/disc/available/1/70071613",
+            "link": [
+              {
+                "href": "http://api.netflix.com/users/nuid_sub1/queues/disc/available",
+                "rel": "http://schemas.netflix.com/queues.available",
+                "title": "available queue"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70071613",
+                "rel": "http://schemas.netflix.com/catalog/title",
+                "title": "No Country for Old Men"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70071613/synopsis",
+                "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+                "title": "synopsis"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70071613/cast",
+                "rel": "http://schemas.netflix.com/catalog/people.cast",
+                "title": "cast"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70071613/directors",
+                "rel": "http://schemas.netflix.com/catalog/people.directors",
+                "title": "directors"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70071613/format_availability",
+                "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+                "title": "formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70071613/awards",
+                "rel": "http://schemas.netflix.com/catalog/titles/awards",
+                "title": "awards"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70071613/screen_formats",
+                "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+                "title": "screen formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70071613/languages_and_audio",
+                "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+                "title": "languages and audio"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70071613/similars",
+                "rel": "http://schemas.netflix.com/catalog/titles.similars",
+                "title": "similars"
+              },
+              {
+                "href": "http://www.netflix.com/Movie/No_Country_for_Old_Men/70071613",
+                "rel": "alternate",
+                "title": "web page"
+              }
+            ],
+            "position": "1",
+            "runtime": "7320",
+            "title": {
+              "regular": "No Country for Old Men",
+              "short": "No Country for Old Men"
+            },
+            "release_year": "2007"
+          },
+          {
+            "average_rating": "3.1",
+            "box_art": {
+              "large": "http://cdn-6.nflximg.com/us/boxshots/large/70117306.jpg",
+              "small": "http://cdn-6.nflximg.com/us/boxshots/tiny/70117306.jpg",
+              "medium": "http://cdn-6.nflximg.com/us/boxshots/small/70117306.jpg"
+            },
+            "category": [
+              {
+                "term": "available now",
+                "content": "Available Now",
+                "scheme": "http://api.netflix.com/categories/queue_availability",
+                "label": "available now"
+              },
+              {
+                "term": "Blu-ray",
+                "scheme": "http://api.netflix.com/categories/title_formats",
+                "label": "Blu-ray"
+              },
+              {
+                "term": "R",
+                "scheme": "http://api.netflix.com/categories/mpaa_ratings",
+                "label": "R"
+              },
+              {
+                "term": "Comedy",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Comedy"
+              },
+              {
+                "term": "Indie Comedies",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Indie Comedies"
+              }
+            ],
+            "updated": "1279363706",
+            "id": "http://api.netflix.com/users/nuid_sub1/queues/disc/available/2/70117306",
+            "link": [
+              {
+                "href": "http://api.netflix.com/users/nuid_sub1/queues/disc/available",
+                "rel": "http://schemas.netflix.com/queues.available",
+                "title": "available queue"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70117306",
+                "rel": "http://schemas.netflix.com/catalog/title",
+                "title": "Extract"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70117306/synopsis",
+                "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+                "title": "synopsis"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70117306/cast",
+                "rel": "http://schemas.netflix.com/catalog/people.cast",
+                "title": "cast"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70117306/directors",
+                "rel": "http://schemas.netflix.com/catalog/people.directors",
+                "title": "directors"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70117306/format_availability",
+                "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+                "title": "formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70117306/screen_formats",
+                "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+                "title": "screen formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70117306/languages_and_audio",
+                "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+                "title": "languages and audio"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70117306/similars",
+                "rel": "http://schemas.netflix.com/catalog/titles.similars",
+                "title": "similars"
+              },
+              {
+                "href": "http://www.netflix.com/Movie/Extract/70117306",
+                "rel": "alternate",
+                "title": "web page"
+              }
+            ],
+            "position": "2",
+            "runtime": "5400",
+            "title": {
+              "regular": "Extract",
+              "short": "Extract"
+            },
+            "release_year": "2009"
+          },
+          {
+            "average_rating": "3.3",
+            "box_art": {
+              "large": "http://cdn-5.nflximg.com/us/boxshots/large/70105135.jpg",
+              "small": "http://cdn-5.nflximg.com/us/boxshots/tiny/70105135.jpg",
+              "medium": "http://cdn-5.nflximg.com/us/boxshots/small/70105135.jpg"
+            },
+            "category": [
+              {
+                "term": "available now",
+                "content": "Available Now",
+                "scheme": "http://api.netflix.com/categories/queue_availability",
+                "label": "available now"
+              },
+              {
+                "term": "Blu-ray",
+                "scheme": "http://api.netflix.com/categories/title_formats",
+                "label": "Blu-ray"
+              },
+              {
+                "term": "R",
+                "scheme": "http://api.netflix.com/categories/mpaa_ratings",
+                "label": "R"
+              },
+              {
+                "term": "Thrillers",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Thrillers"
+              },
+              {
+                "term": "Suspense",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Suspense"
+              },
+              {
+                "term": "Dramas Based on Contemporary Literature",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Dramas Based on Contemporary Literature"
+              },
+              {
+                "term": "Dramas Based on the Book",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Dramas Based on the Book"
+              }
+            ],
+            "updated": "1277009665",
+            "id": "http://api.netflix.com/users/nuid_sub1/queues/disc/available/3/70105135",
+            "link": [
+              {
+                "href": "http://api.netflix.com/users/nuid_sub1/queues/disc/available",
+                "rel": "http://schemas.netflix.com/queues.available",
+                "title": "available queue"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70105135",
+                "rel": "http://schemas.netflix.com/catalog/title",
+                "title": "The Road"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70105135/synopsis",
+                "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+                "title": "synopsis"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70105135/cast",
+                "rel": "http://schemas.netflix.com/catalog/people.cast",
+                "title": "cast"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70105135/directors",
+                "rel": "http://schemas.netflix.com/catalog/people.directors",
+                "title": "directors"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70105135/format_availability",
+                "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+                "title": "formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70105135/screen_formats",
+                "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+                "title": "screen formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70105135/languages_and_audio",
+                "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+                "title": "languages and audio"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70105135/similars",
+                "rel": "http://schemas.netflix.com/catalog/titles.similars",
+                "title": "similars"
+              },
+              {
+                "href": "http://www.netflix.com/Movie/The_Road/70105135",
+                "rel": "alternate",
+                "title": "web page"
+              }
+            ],
+            "position": "3",
+            "runtime": "6660",
+            "title": {
+              "regular": "The Road",
+              "short": "The Road"
+            },
+            "release_year": "2009"
+          }
+        ]
+      }}
+  post:
+    body: |
+      {"status": {
+        "resources_created": {"queue_item": {
+          "average_rating": "3.4",
+          "box_art": {
+            "large": "http://cdn-2.nflximg.com/us/boxshots/large/70167072.jpg",
+            "small": "http://cdn-2.nflximg.com/us/boxshots/tiny/70167072.jpg",
+            "medium": "http://cdn-2.nflximg.com/us/boxshots/small/70167072.jpg"
+          },
+          "category": [
+            {
+              "term": "available now",
+              "content": "Available Now",
+              "scheme": "http://api.netflix.com/categories/queue_availability",
+              "label": "available now"
+            },
+            {
+              "term": "Blu-ray",
+              "scheme": "http://api.netflix.com/categories/title_formats",
+              "label": "Blu-ray"
+            },
+            {
+              "term": "PG-13",
+              "scheme": "http://api.netflix.com/categories/mpaa_ratings",
+              "label": "PG-13"
+            },
+            {
+              "term": "Comedy",
+              "scheme": "http://api.netflix.com/categories/genres",
+              "label": "Comedy"
+            },
+            {
+              "term": "Romantic Comedies",
+              "scheme": "http://api.netflix.com/categories/genres",
+              "label": "Romantic Comedies"
+            }
+          ],
+          "updated": "1323539988",
+          "id": "http://api.netflix.com/users/nuid_sub1/queues/disc/available/1/70167072",
+          "link": [
+            {
+              "href": "http://api.netflix.com/users/nuid_sub1/queues/disc/available",
+              "rel": "http://schemas.netflix.com/queues.available",
+              "title": "available queue"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70167072",
+              "rel": "http://schemas.netflix.com/catalog/title",
+              "title": "Arthur"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70167072/synopsis",
+              "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+              "title": "synopsis"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70167072/cast",
+              "rel": "http://schemas.netflix.com/catalog/people.cast",
+              "title": "cast"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70167072/directors",
+              "rel": "http://schemas.netflix.com/catalog/people.directors",
+              "title": "directors"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70167072/format_availability",
+              "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+              "title": "formats"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70167072/screen_formats",
+              "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+              "title": "screen formats"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70167072/languages_and_audio",
+              "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+              "title": "languages and audio"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70167072/similars",
+              "rel": "http://schemas.netflix.com/catalog/titles.similars",
+              "title": "similars"
+            },
+            {
+              "href": "http://www.netflix.com/Movie/Arthur/70167072",
+              "rel": "alternate",
+              "title": "web page"
+            }
+          ],
+          "position": "1",
+          "runtime": "6600",
+          "title": {
+            "regular": "Arthur",
+            "short": "Arthur"
+          },
+          "release_year": "2011"
+        }},
+        "status_code": "201",
+        "message": "Move successful",
+        "etag": "82198468425"
+      }}
+  delete:
+    body:
+
+nuid_sub2:
+  get:
+    body: |
+      {"queue": {
+        "link": [
+          {
+            "href": "http://api.netflix.com/users/nuid_sub2/queues/disc/available",
+            "rel": "http://schemas.netflix.com/queues.available",
+            "title": "available queue"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub2/queues/disc/saved",
+            "rel": "http://schemas.netflix.com/queues.saved",
+            "title": "saved queue"
+          }
+        ],
+        "results_per_page": "3",
+        "url_template": "http://api.netflix.com/users/nuid_sub2/queues/disc?{-join|&|sort|start_index|max_results}",
+        "start_index": "0",
+        "etag": "115673854498",
+        "number_of_results": "3",
+        "queue_item": [
+          {
+            "average_rating": "3.7",
+            "box_art": {
+              "large": "http://cdn-3.nflximg.com/us/boxshots/large/1180113.jpg",
+              "small": "http://cdn-3.nflximg.com/us/boxshots/tiny/1180113.jpg",
+              "medium": "http://cdn-3.nflximg.com/us/boxshots/small/1180113.jpg"
+            },
+            "category": [
+              {
+                "term": "available now",
+                "content": "Available Now",
+                "scheme": "http://api.netflix.com/categories/queue_availability",
+                "label": "available now"
+              },
+              {
+                "term": "Blu-ray",
+                "scheme": "http://api.netflix.com/categories/title_formats",
+                "label": "Blu-ray"
+              },
+              {
+                "term": "PG-13",
+                "scheme": "http://api.netflix.com/categories/mpaa_ratings",
+                "label": "PG-13"
+              },
+              {
+                "term": "Sci-Fi & Fantasy",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Sci-Fi & Fantasy"
+              },
+              {
+                "term": "Sci-Fi Dramas",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Sci-Fi Dramas"
+              },
+              {
+                "term": "Sci-Fi Thrillers",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Sci-Fi Thrillers"
+              }
+            ],
+            "updated": "1284627952",
+            "id": "http://api.netflix.com/users/nuid_sub2/queues/disc/available/1/1180113",
+            "link": [
+              {
+                "href": "http://api.netflix.com/users/nuid_sub2/queues/disc/available",
+                "rel": "http://schemas.netflix.com/queues.available",
+                "title": "available queue"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/1180113",
+                "rel": "http://schemas.netflix.com/catalog/title",
+                "title": "Gattaca"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/1180113/synopsis",
+                "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+                "title": "synopsis"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/1180113/cast",
+                "rel": "http://schemas.netflix.com/catalog/people.cast",
+                "title": "cast"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/1180113/directors",
+                "rel": "http://schemas.netflix.com/catalog/people.directors",
+                "title": "directors"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/1180113/format_availability",
+                "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+                "title": "formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/1180113/awards",
+                "rel": "http://schemas.netflix.com/catalog/titles/awards",
+                "title": "awards"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/1180113/screen_formats",
+                "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+                "title": "screen formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/1180113/languages_and_audio",
+                "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+                "title": "languages and audio"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/1180113/similars",
+                "rel": "http://schemas.netflix.com/catalog/titles.similars",
+                "title": "similars"
+              },
+              {
+                "href": "http://www.spe.sony.com/Pictures/SonyMovies/movies/Gattaca/",
+                "rel": "http://schemas.netflix.com/catalog/titles/official_url",
+                "title": "official webpage"
+              },
+              {
+                "href": "http://www.netflix.com/Movie/Gattaca/1180113",
+                "rel": "alternate",
+                "title": "web page"
+              }
+            ],
+            "position": "1",
+            "runtime": "6360",
+            "title": {
+              "regular": "Gattaca",
+              "short": "Gattaca"
+            },
+            "release_year": "1997"
+          },
+          {
+            "average_rating": "3.4",
+            "box_art": {
+              "large": "http://cdn-9.nflximg.com/us/boxshots/large/60000209.jpg",
+              "small": "http://cdn-9.nflximg.com/us/boxshots/tiny/60000209.jpg",
+              "medium": "http://cdn-9.nflximg.com/us/boxshots/small/60000209.jpg"
+            },
+            "category": [
+              {
+                "term": "available now",
+                "content": "Available Now",
+                "scheme": "http://api.netflix.com/categories/queue_availability",
+                "label": "available now"
+              },
+              {
+                "term": "DVD",
+                "scheme": "http://api.netflix.com/categories/title_formats",
+                "label": "DVD"
+              },
+              {
+                "term": "R",
+                "scheme": "http://api.netflix.com/categories/mpaa_ratings",
+                "label": "R"
+              },
+              {
+                "term": "Thrillers",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Thrillers"
+              },
+              {
+                "term": "Psychological Thrillers",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Psychological Thrillers"
+              },
+              {
+                "term": "Dramas Based on the Book",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Dramas Based on the Book"
+              },
+              {
+                "term": "Crime Thrillers",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Crime Thrillers"
+              },
+              {
+                "term": "Dramas Based on Classic Literature",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Dramas Based on Classic Literature"
+              },
+              {
+                "term": "Period Pieces",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Period Pieces"
+              },
+              {
+                "term": "20th Century Period Pieces",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "20th Century Period Pieces"
+              }
+            ],
+            "updated": "1281864775",
+            "id": "http://api.netflix.com/users/nuid_sub2/queues/disc/available/2/60000209",
+            "link": [
+              {
+                "href": "http://api.netflix.com/users/nuid_sub2/queues/disc/available",
+                "rel": "http://schemas.netflix.com/queues.available",
+                "title": "available queue"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/60000209",
+                "rel": "http://schemas.netflix.com/catalog/title",
+                "title": "The Talented Mr. Ripley"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/60000209/synopsis",
+                "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+                "title": "synopsis"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/60000209/cast",
+                "rel": "http://schemas.netflix.com/catalog/people.cast",
+                "title": "cast"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/60000209/directors",
+                "rel": "http://schemas.netflix.com/catalog/people.directors",
+                "title": "directors"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/60000209/format_availability",
+                "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+                "title": "formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/60000209/awards",
+                "rel": "http://schemas.netflix.com/catalog/titles/awards",
+                "title": "awards"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/60000209/screen_formats",
+                "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+                "title": "screen formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/60000209/languages_and_audio",
+                "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+                "title": "languages and audio"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/60000209/similars",
+                "rel": "http://schemas.netflix.com/catalog/titles.similars",
+                "title": "similars"
+              },
+              {
+                "href": "http://www.talentedmrripley.com/",
+                "rel": "http://schemas.netflix.com/catalog/titles/official_url",
+                "title": "official webpage"
+              },
+              {
+                "href": "http://www.netflix.com/Movie/The_Talented_Mr._Ripley/60000209",
+                "rel": "alternate",
+                "title": "web page"
+              }
+            ],
+            "position": "2",
+            "runtime": "8340",
+            "title": {
+              "regular": "The Talented Mr. Ripley",
+              "short": "The Talented Mr. Ripley"
+            },
+            "release_year": "1999"
+          },
+          {
+            "average_rating": "3.6",
+            "box_art": {
+              "large": "http://cdn-9.nflximg.com/us/boxshots/large/70075479.jpg",
+              "small": "http://cdn-9.nflximg.com/us/boxshots/tiny/70075479.jpg",
+              "medium": "http://cdn-9.nflximg.com/us/boxshots/small/70075479.jpg"
+            },
+            "category": [
+              {
+                "term": "available now",
+                "content": "Available Now",
+                "scheme": "http://api.netflix.com/categories/queue_availability",
+                "label": "available now"
+              },
+              {
+                "term": "Blu-ray",
+                "scheme": "http://api.netflix.com/categories/title_formats",
+                "label": "Blu-ray"
+              },
+              {
+                "term": "R",
+                "scheme": "http://api.netflix.com/categories/mpaa_ratings",
+                "label": "R"
+              },
+              {
+                "term": "Action & Adventure",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Action & Adventure"
+              },
+              {
+                "term": "Action Thrillers",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Action Thrillers"
+              },
+              {
+                "term": "Crime Action",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Crime Action"
+              },
+              {
+                "term": "Comic Books and Superheroes",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Comic Books and Superheroes"
+              }
+            ],
+            "updated": "1283193767",
+            "id": "http://api.netflix.com/users/nuid_sub2/queues/disc/available/3/70075479",
+            "link": [
+              {
+                "href": "http://api.netflix.com/users/nuid_sub2/queues/disc/available",
+                "rel": "http://schemas.netflix.com/queues.available",
+                "title": "available queue"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70075479",
+                "rel": "http://schemas.netflix.com/catalog/title",
+                "title": "Wanted"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70075479/synopsis",
+                "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+                "title": "synopsis"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70075479/bonus_materials",
+                "rel": "http://schemas.netflix.com/catalog/titles/bonus_materials",
+                "title": "bonus materials"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70075479/cast",
+                "rel": "http://schemas.netflix.com/catalog/people.cast",
+                "title": "cast"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70075479/directors",
+                "rel": "http://schemas.netflix.com/catalog/people.directors",
+                "title": "directors"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70075479/format_availability",
+                "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+                "title": "formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70075479/screen_formats",
+                "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+                "title": "screen formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70075479/languages_and_audio",
+                "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+                "title": "languages and audio"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70075479/similars",
+                "rel": "http://schemas.netflix.com/catalog/titles.similars",
+                "title": "similars"
+              },
+              {
+                "href": "http://www.netflix.com/Movie/Wanted/70075479",
+                "rel": "alternate",
+                "title": "web page"
+              }
+            ],
+            "position": "3",
+            "runtime": "6600",
+            "title": {
+              "regular": "Wanted",
+              "short": "Wanted"
+            },
+            "release_year": "2008"
+          }
+        ]
+      }}
+  post:
+    body:
+  delete:
+    body:

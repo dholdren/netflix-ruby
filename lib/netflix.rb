@@ -1,0 +1,5 @@
+require 'netflix/json_resource'
+require 'netflix/client'
+require 'netflix/user'
+require 'netflix/queue'
+require 'netflix/disc'

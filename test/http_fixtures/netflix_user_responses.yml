@@ -1,0 +1,208 @@
+nuid_one:
+  get:
+    body: |
+      {"user": {
+        "can_instant_watch": true,
+        "first_name": "Jane",
+        "last_name": "Smith",
+        "link": [
+          {
+            "href": "http://api.netflix.com/users/nuid_one/queues",
+            "rel": "http://schemas.netflix.com/queues",
+            "title": "queues"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_one/rental_history",
+            "rel": "http://schemas.netflix.com/rental_history",
+            "title": "rental history"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_one/recommendations",
+            "rel": "http://schemas.netflix.com/recommendations",
+            "title": "recommendations"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_one/title_states",
+            "rel": "http://schemas.netflix.com/title_states",
+            "title": "title states"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_one/ratings",
+            "rel": "http://schemas.netflix.com/ratings",
+            "title": "ratings"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_one/reviews",
+            "rel": "http://schemas.netflix.com/reviews",
+            "title": "reviews"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_one/at_home",
+            "rel": "http://schemas.netflix.com/at_home",
+            "title": "at home"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_one/feeds",
+            "rel": "http://schemas.netflix.com/feeds",
+            "title": "feeds"
+          }
+        ],
+        "max_maturity_level": {"category": {
+          "label": 1000000,
+          "scheme": "http://api.netflix.com/categories/maturity_level",
+          "term": 1000000
+        }},
+        "nickname": "foobar",
+        "preferred_formats": {"category": [
+          {
+            "label": "Blu-ray",
+            "scheme": "http://api.netflix.com/categories/title_formats",
+            "term": "Blu-ray"
+          },
+          {
+            "label": "DVD",
+            "scheme": "http://api.netflix.com/categories/title_formats",
+            "term": "DVD"
+          }
+        ]},
+        "user_id": "nuid_one"
+      }}
+
+nuid_sub1:
+  get:
+    body: |
+      {"user": {
+        "can_instant_watch": false,
+        "first_name": "John",
+        "last_name": "Smith",
+        "link": [
+          {
+            "href": "http://api.netflix.com/users/nuid_sub1/queues",
+            "rel": "http://schemas.netflix.com/queues",
+            "title": "queues"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub1/rental_history",
+            "rel": "http://schemas.netflix.com/rental_history",
+            "title": "rental history"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub1/recommendations",
+            "rel": "http://schemas.netflix.com/recommendations",
+            "title": "recommendations"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub1/title_states",
+            "rel": "http://schemas.netflix.com/title_states",
+            "title": "title states"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub1/ratings",
+            "rel": "http://schemas.netflix.com/ratings",
+            "title": "ratings"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub1/reviews",
+            "rel": "http://schemas.netflix.com/reviews",
+            "title": "reviews"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub1/at_home",
+            "rel": "http://schemas.netflix.com/at_home",
+            "title": "at home"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub1/feeds",
+            "rel": "http://schemas.netflix.com/feeds",
+            "title": "feeds"
+          }
+        ],
+        "max_maturity_level": {"category": {
+          "label": 1000000,
+          "scheme": "http://api.netflix.com/categories/maturity_level",
+          "term": 1000000
+        }},
+        "nickname": "foobar",
+        "preferred_formats": {"category": [
+          {
+            "label": "Blu-ray",
+            "scheme": "http://api.netflix.com/categories/title_formats",
+            "term": "Blu-ray"
+          },
+          {
+            "label": "DVD",
+            "scheme": "http://api.netflix.com/categories/title_formats",
+            "term": "DVD"
+          }
+        ]},
+        "user_id": "nuid_sub1"
+      }}
+nuid_sub2:
+  get:
+    body: |
+      {"user": {
+        "can_instant_watch": true,
+        "first_name": "Jim",
+        "last_name": "Smith",
+        "link": [
+          {
+            "href": "http://api.netflix.com/users/nuid_sub2/queues",
+            "rel": "http://schemas.netflix.com/queues",
+            "title": "queues"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub2/rental_history",
+            "rel": "http://schemas.netflix.com/rental_history",
+            "title": "rental history"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub2/recommendations",
+            "rel": "http://schemas.netflix.com/recommendations",
+            "title": "recommendations"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub2/title_states",
+            "rel": "http://schemas.netflix.com/title_states",
+            "title": "title states"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub2/ratings",
+            "rel": "http://schemas.netflix.com/ratings",
+            "title": "ratings"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub2/reviews",
+            "rel": "http://schemas.netflix.com/reviews",
+            "title": "reviews"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub2/at_home",
+            "rel": "http://schemas.netflix.com/at_home",
+            "title": "at home"
+          },
+          {
+            "href": "http://api.netflix.com/users/nuid_sub2/feeds",
+            "rel": "http://schemas.netflix.com/feeds",
+            "title": "feeds"
+          }
+        ],
+        "max_maturity_level": {"category": {
+          "label": 1000000,
+          "scheme": "http://api.netflix.com/categories/maturity_level",
+          "term": 1000000
+        }},
+        "nickname": "foobar",
+        "preferred_formats": {"category": [
+          {
+            "label": "Blu-ray",
+            "scheme": "http://api.netflix.com/categories/title_formats",
+            "term": "Blu-ray"
+          },
+          {
+            "label": "DVD",
+            "scheme": "http://api.netflix.com/categories/title_formats",
+            "term": "DVD"
+          }
+        ]},
+        "user_id": "nuid_sub2"
+      }}
