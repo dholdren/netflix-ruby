@@ -61,5 +61,13 @@ class QueueTest < Test::Unit::TestCase
   #  }
   #end
   
+  def test_empty_queue
+    stub_netflix_for_user('empty_queue')
+    user = Netflix::Client.new('nuid_access_key', 'nuid_access_secret').user('empty_queue')
+    available_disc_queue = user.available_disc_queue
+    assert available_disc_queue, "Expected a disc_queue"
+    assert available_disc_queue.discs, "Expected the disc_queue to have a discs attribute"
+    assert_equal 0, available_disc_queue.discs.size, "Expected discs to be empty array #{available_disc_queue.discs[0]}}"
+  end
   
 end

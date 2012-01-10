@@ -206,3 +206,72 @@ nuid_sub2:
         ]},
         "user_id": "nuid_sub2"
       }}
+empty_queue:
+  get:
+    body: |
+      {"user": {
+        "can_instant_watch": true,
+        "first_name": "Empty",
+        "last_name": "Queue",
+        "link": [
+          {
+            "href": "http://api.netflix.com/users/empty_queue/queues",
+            "rel": "http://schemas.netflix.com/queues",
+            "title": "queues"
+          },
+          {
+            "href": "http://api.netflix.com/users/empty_queue/rental_history",
+            "rel": "http://schemas.netflix.com/rental_history",
+            "title": "rental history"
+          },
+          {
+            "href": "http://api.netflix.com/users/empty_queue/recommendations",
+            "rel": "http://schemas.netflix.com/recommendations",
+            "title": "recommendations"
+          },
+          {
+            "href": "http://api.netflix.com/users/empty_queue/title_states",
+            "rel": "http://schemas.netflix.com/title_states",
+            "title": "title states"
+          },
+          {
+            "href": "http://api.netflix.com/users/empty_queue/ratings",
+            "rel": "http://schemas.netflix.com/ratings",
+            "title": "ratings"
+          },
+          {
+            "href": "http://api.netflix.com/users/empty_queue/reviews",
+            "rel": "http://schemas.netflix.com/reviews",
+            "title": "reviews"
+          },
+          {
+            "href": "http://api.netflix.com/users/empty_queue/at_home",
+            "rel": "http://schemas.netflix.com/at_home",
+            "title": "at home"
+          },
+          {
+            "href": "http://api.netflix.com/users/empty_queue/feeds",
+            "rel": "http://schemas.netflix.com/feeds",
+            "title": "feeds"
+          }
+        ],
+        "max_maturity_level": {"category": {
+          "label": 1000000,
+          "scheme": "http://api.netflix.com/categories/maturity_level",
+          "term": 1000000
+        }},
+        "nickname": "foobar",
+        "preferred_formats": {"category": [
+          {
+            "label": "Blu-ray",
+            "scheme": "http://api.netflix.com/categories/title_formats",
+            "term": "Blu-ray"
+          },
+          {
+            "label": "DVD",
+            "scheme": "http://api.netflix.com/categories/title_formats",
+            "term": "DVD"
+          }
+        ]},
+        "user_id": "empty_queue"
+      }}

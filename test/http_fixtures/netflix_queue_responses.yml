@@ -1169,3 +1169,29 @@ nuid_sub2:
     body:
   delete:
     body:
+empty_queue:
+  get:
+    body: |
+      {"queue": {
+        "link": [
+          {
+            "href": "http://api.netflix.com/users/empty_queue/queues/disc/available",
+            "rel": "http://schemas.netflix.com/queues.available",
+            "title": "available queue"
+          },
+          {
+            "href": "http://api.netflix.com/users/empty_queue/queues/disc/saved",
+            "rel": "http://schemas.netflix.com/queues.saved",
+            "title": "saved queue"
+          }
+        ],
+        "results_per_page": "0",
+        "url_template": "http://api.netflix.com/users/empty_queue/queues/disc?{-join|&|sort|start_index|max_results}",
+        "start_index": "0",
+        "etag": "0",
+        "number_of_results": "0"
+      }}
+  post:
+    body:
+  delete:
+    body:

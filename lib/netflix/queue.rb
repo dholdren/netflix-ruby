@@ -39,8 +39,12 @@ module Netflix
     end
     
     def discs
-      queue_items = [queue_item].flatten
-      queue_items.map {|queue_item| Disc.new(queue_item)}
+      if queue_item
+        queue_items = [queue_item].flatten
+        queue_items.map {|queue_item| Disc.new(queue_item)}
+      else
+        []
+      end
     end
     
     private

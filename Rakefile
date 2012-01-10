@@ -11,7 +11,7 @@ Rake::TestTask.new("test") { |t|
 
 gem_spec = Gem::Specification.new do |s|
   s.name = "netflix"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
   s.authors = ["Dean Holdren"]
   s.date = %q{2012-01-09}
   s.description = "Ruby Netflix API wrapper"
