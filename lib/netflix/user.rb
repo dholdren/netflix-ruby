@@ -17,11 +17,7 @@ module Netflix
     private
     def retrieve
       response = @oauth_access_token.get "/users/#{@user_id}?output=json"
-      if response && response.body && response.code_type == Net::HTTPOK
-        JSON.parse(response.body)["user"]
-      else
-        raise "Error retrieving user #{@user_id}"
-      end
+      JSON.parse(response.body)["user"]
     end
     
   end

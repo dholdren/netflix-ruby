@@ -1,4 +1,6 @@
-require 'netflix/json_resource'
+#require 'netflix/json_resource'
+require 'netflix/errors'
+require 'netflix/response'
 require 'netflix/client'
 require 'netflix/user'
 require 'netflix/queue'

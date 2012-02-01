@@ -324,7 +324,129 @@ nuid_one:
         ]
       }}
   post:
-    body:
+    body: |
+      {"status": {
+        "resources_created": {"queue_item": {
+          "average_rating": "3.7",
+          "box_art": {
+            "large": "http://cdn-3.nflximg.com/us/boxshots/large/70071613.jpg",
+            "small": "http://cdn-3.nflximg.com/us/boxshots/tiny/70071613.jpg",
+            "medium": "http://cdn-3.nflximg.com/us/boxshots/small/70071613.jpg"
+          },
+          "category": [
+            {
+              "term": "available now",
+              "content": "Available Now",
+              "scheme": "http://api.netflix.com/categories/queue_availability",
+              "label": "available now"
+            },
+            {
+              "term": "Blu-ray",
+              "scheme": "http://api.netflix.com/categories/title_formats",
+              "label": "Blu-ray"
+            },
+            {
+              "term": "R",
+              "scheme": "http://api.netflix.com/categories/mpaa_ratings",
+              "label": "R"
+            },
+            {
+              "term": "Thrillers",
+              "scheme": "http://api.netflix.com/categories/genres",
+              "label": "Thrillers"
+            },
+            {
+              "term": "Crime Thrillers",
+              "scheme": "http://api.netflix.com/categories/genres",
+              "label": "Crime Thrillers"
+            },
+            {
+              "term": "Suspense",
+              "scheme": "http://api.netflix.com/categories/genres",
+              "label": "Suspense"
+            },
+            {
+              "term": "Dramas Based on Contemporary Literature",
+              "scheme": "http://api.netflix.com/categories/genres",
+              "label": "Dramas Based on Contemporary Literature"
+            },
+            {
+              "term": "Dramas Based on the Book",
+              "scheme": "http://api.netflix.com/categories/genres",
+              "label": "Dramas Based on the Book"
+            }
+          ],
+          "updated": "1276960028",
+          "id": "http://api.netflix.com/users/nuid_one/queues/disc/available/4/70071613",
+          "link": [
+            {
+              "href": "http://api.netflix.com/users/nuid_one/queues/disc/available",
+              "rel": "http://schemas.netflix.com/queues.available",
+              "title": "available queue"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70071613",
+              "rel": "http://schemas.netflix.com/catalog/title",
+              "title": "No Country for Old Men"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70071613/synopsis",
+              "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+              "title": "synopsis"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70071613/cast",
+              "rel": "http://schemas.netflix.com/catalog/people.cast",
+              "title": "cast"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70071613/directors",
+              "rel": "http://schemas.netflix.com/catalog/people.directors",
+              "title": "directors"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70071613/format_availability",
+              "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+              "title": "formats"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70071613/awards",
+              "rel": "http://schemas.netflix.com/catalog/titles/awards",
+              "title": "awards"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70071613/screen_formats",
+              "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+              "title": "screen formats"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70071613/languages_and_audio",
+              "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+              "title": "languages and audio"
+            },
+            {
+              "href": "http://api.netflix.com/catalog/titles/movies/70071613/similars",
+              "rel": "http://schemas.netflix.com/catalog/titles.similars",
+              "title": "similars"
+            },
+            {
+              "href": "http://www.netflix.com/Movie/No_Country_for_Old_Men/70071613",
+              "rel": "alternate",
+              "title": "web page"
+            }
+          ],
+          "position": "4",
+          "runtime": "7320",
+          "title": {
+            "regular": "No Country for Old Men",
+            "short": "No Country for Old Men"
+          },
+          "release_year": "2007"
+        }},
+        "status_code": "201",
+        "message": "Move successful",
+        "etag": "82198468425"
+      }}
   delete:
     body: |
       {"status": {
@@ -1192,6 +1314,108 @@ empty_queue:
         "number_of_results": "0"
       }}
   post:
-    body:
+    body: |
+      {"status": {
+          "resources_created": {"queue_item": {
+            "average_rating": "3.4",
+            "box_art": {
+              "large": "http://cdn-2.nflximg.com/us/boxshots/large/70167072.jpg",
+              "small": "http://cdn-2.nflximg.com/us/boxshots/tiny/70167072.jpg",
+              "medium": "http://cdn-2.nflximg.com/us/boxshots/small/70167072.jpg"
+            },
+            "category": [
+              {
+                "term": "available now",
+                "content": "Available Now",
+                "scheme": "http://api.netflix.com/categories/queue_availability",
+                "label": "available now"
+              },
+              {
+                "term": "Blu-ray",
+                "scheme": "http://api.netflix.com/categories/title_formats",
+                "label": "Blu-ray"
+              },
+              {
+                "term": "PG-13",
+                "scheme": "http://api.netflix.com/categories/mpaa_ratings",
+                "label": "PG-13"
+              },
+              {
+                "term": "Comedy",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Comedy"
+              },
+              {
+                "term": "Romantic Comedies",
+                "scheme": "http://api.netflix.com/categories/genres",
+                "label": "Romantic Comedies"
+              }
+            ],
+            "updated": "1323539988",
+            "id": "http://api.netflix.com/users/empty_queue/queues/disc/available/1/70167072",
+            "link": [
+              {
+                "href": "http://api.netflix.com/users/empty_queue/queues/disc/available",
+                "rel": "http://schemas.netflix.com/queues.available",
+                "title": "available queue"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072",
+                "rel": "http://schemas.netflix.com/catalog/title",
+                "title": "Arthur"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072/synopsis",
+                "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+                "title": "synopsis"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072/cast",
+                "rel": "http://schemas.netflix.com/catalog/people.cast",
+                "title": "cast"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072/directors",
+                "rel": "http://schemas.netflix.com/catalog/people.directors",
+                "title": "directors"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072/format_availability",
+                "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+                "title": "formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072/screen_formats",
+                "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+                "title": "screen formats"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072/languages_and_audio",
+                "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+                "title": "languages and audio"
+              },
+              {
+                "href": "http://api.netflix.com/catalog/titles/movies/70167072/similars",
+                "rel": "http://schemas.netflix.com/catalog/titles.similars",
+                "title": "similars"
+              },
+              {
+                "href": "http://www.netflix.com/Movie/Arthur/70167072",
+                "rel": "alternate",
+                "title": "web page"
+              }
+            ],
+            "position": "1",
+            "runtime": "6600",
+            "title": {
+              "regular": "Arthur",
+              "short": "Arthur"
+            },
+            "release_year": "2011"
+          }},
+          "status_code": "201",
+          "message": "Move successful",
+          "etag": "82198468425"
+        }}
   delete:
     body:

@@ -1,13 +1,35 @@
 require 'rake/testtask'
 require 'rubygems/package_task'
 
-Rake::TestTask.new("test") { |t|
+Rake::TestTask.new("test:unit") { |t|
   t.libs << 'test'
-  t.test_files = Dir.glob( "test/**/*_test.rb" ).sort
+  t.test_files = Dir.glob( "test/*_test.rb" ).sort
 
   t.verbose = true
   t.warning = true
 }
+require File.join(File.dirname(__FILE__), 'test/integration/rake_test_helper')
+
+file "test/integration/oauth_settings.yml" do |t|
+  credentials = IntegrationTestHelper.obtain_credentials
+  open("test/integration/oauth_settings.yml", 'wb') do |f|
+    YAML.dump(credentials, f)
+  end
+end
+
+Rake::TestTask.new("test:integration") { |t|
+  #t.description = "Run integration tests against a REAL netflix account you supply"
+  t.libs << 'test'
+  t.test_files = Dir.glob( "test/integration/**/*_test.rb" ).sort
+
+  t.verbose = true
+  t.warning = true
+}
+
+task "test:integration" => "test/integration/oauth_settings.yml"
+
+desc "run unit tests only"
+task :test => "test:unit"
 
 gem_spec = Gem::Specification.new do |s|
   s.name = "netflix"

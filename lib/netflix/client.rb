@@ -16,6 +16,8 @@ module Netflix
         :authorize_url => "https://api-user.netflix.com/oauth/login")
       if user_access_token && user_access_secret
         @oauth_access_token = oauth_access_token(user_access_token, user_access_secret)
+        #automatically determine if error should be thrown based on response codes
+        @oauth_access_token.extend(ResponseErrorDecorator)
       elsif !!user_access_token ^ !!user_access_secret
         raise ArgumentError 'Must specify both user_access_token and user_access_secret if specifying either'
       end
@@ -36,6 +38,8 @@ module Netflix
       authorize_url = request_token.authorize_url(:oauth_consumer_key => 
         Netflix::Client.consumer_key)
       Launchy.open(authorize_url)
+      puts "Go to browser, a page has been opened to establish oauth"
+      printf "Pin from Netflix:"
       pin = gets.chomp
       access_token = request_token.get_access_token(:oauth_verifier => pin)
     end
