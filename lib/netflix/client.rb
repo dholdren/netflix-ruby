@@ -3,7 +3,7 @@ require 'oauth'
 module Netflix
   class Client
     class << self
-      attr_accessor :consumer_key, :consumer_secret
+      attr_accessor :consumer_key, :consumer_secret, :app_name
     end
     
     #attr_accessor :oauth_consumer, :oauth_access_token
@@ -46,9 +46,9 @@ module Netflix
     
     def oauth_via_callback(callback_url)
       request_token = @oauth_consumer.get_request_token(:oauth_callback => 
-        callback_url, :application_name => NetflixOauth.app_name)
+        callback_url, :application_name => Netflix::Client.app_name)
       authorize_url = request_token.authorize_url(:oauth_consumer_key => 
-        Netflix::Client.cosumer_key)
+        Netflix::Client.consumer_key)
       [request_token, authorize_url]
     end
     

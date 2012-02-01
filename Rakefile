@@ -33,7 +33,7 @@ task :test => "test:unit"
 
 gem_spec = Gem::Specification.new do |s|
   s.name = "netflix"
-  s.version = "0.1.1"
+  s.version = "0.2.1"
   s.authors = ["Dean Holdren"]
   s.date = %q{2012-01-09}
   s.description = "Ruby Netflix API wrapper"
