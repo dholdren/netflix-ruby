@@ -12,8 +12,8 @@ This will provide you with a "consumer key", "consumer secret", and "application
 
 === To use authenticated features (i.e. queue management):
 * Set the consumer/developer config:
-    Netflix.consumer_key = <your consumer/developer key>
-    Netflix.consumer_secret = <your consumer/developer secret>
+    Netflix::Client.consumer_key = <your consumer/developer key>
+    Netflix::Client.consumer_secret = <your consumer/developer secret>
 
 * Do OAuth dance: (This is a one-time per user step, save the result somewhere.)
   1. Interactive (commandline/irb):
