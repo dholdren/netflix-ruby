@@ -1,5 +1,7 @@
+# -*- encoding: utf-8 -*-
 require 'rake/testtask'
-require 'rubygems/package_task'
+lib = File.expand_path('../lib/', __FILE__)
+$:.unshift lib unless $:.include?(lib)
 
 Rake::TestTask.new("test:unit") { |t|
   t.libs << 'test'
@@ -31,29 +33,14 @@ task "test:integration" => "test/integration/oauth_settings.yml"
 desc "run unit tests only"
 task :test => "test:unit"
 
-gem_spec = Gem::Specification.new do |s|
-  s.name = "netflix"
-  s.version = "0.2.1"
-  s.authors = ["Dean Holdren"]
-  s.date = %q{2012-01-09}
-  s.description = "Ruby Netflix API wrapper"
-  s.summary = s.description
-  s.email = 'deanholdren@gmail.com'
-  
-  s.require_path = "lib"
-  s.files = `git ls-files`.split("\n")
-  s.test_files = `git ls-files -- test/*`.split("\n")
-  
-  s.homepage = "https://github.com/dholdren/netflix-ruby"
-  s.has_rdoc = false
-  
-  s.add_dependency("oauth")
-  s.add_dependency("json")
-  s.add_dependency("launchy")
-  s.add_development_dependency("fakeweb")
-  s.add_development_dependency("yaml")
+# Gem tasks
+require "netflix/version"
+ 
+task :build do
+  system "gem build .gemspec"
+end
+ 
+task :release => :build do
+  system "gem push bundler-#{Netflix::VERSION}"
 end
 
-Gem::PackageTask.new(gem_spec) do |pkg|
-  pkg.need_zip = true
-end
