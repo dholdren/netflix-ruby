@@ -10,9 +10,9 @@ module Netflix
     
     def initialize(user_access_token=nil, user_access_secret=nil)
       @oauth_consumer = OAuth::Consumer.new(Client.consumer_key, Client.consumer_secret,
-        :site => "http://api.netflix.com", 
-        :request_token_url => "http://api.netflix.com/oauth/request_token", 
-        :access_token_url => "http://api.netflix.com/oauth/access_token", 
+        :site => "http://api-public.netflix.com", 
+        :request_token_url => "http://api-public.netflix.com/oauth/request_token", 
+        :access_token_url => "http://api-public.netflix.com/oauth/access_token", 
         :authorize_url => "https://api-user.netflix.com/oauth/login")
       if user_access_token && user_access_secret
         @oauth_access_token = oauth_access_token(user_access_token, user_access_secret)
