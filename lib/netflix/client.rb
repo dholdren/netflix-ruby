@@ -6,8 +6,6 @@ module Netflix
       attr_accessor :consumer_key, :consumer_secret, :app_name
     end
     
-    #attr_accessor :oauth_consumer, :oauth_access_token
-    
     def initialize(user_access_token=nil, user_access_secret=nil)
       @oauth_consumer = OAuth::Consumer.new(Client.consumer_key, Client.consumer_secret,
         :site => "http://api-public.netflix.com", 
@@ -31,8 +29,8 @@ module Netflix
       end
     end
     
-    #launches the Netflix OAuth page, and asks for the pin
-    #this is interactive (i.e. irb or commandline)
+    # launches the Netflix OAuth page, and asks for the pin
+    # this is interactive (i.e. irb or commandline)
     def oauth
       request_token = @oauth_consumer.get_request_token
       authorize_url = request_token.authorize_url(:oauth_consumer_key => 
@@ -41,7 +39,7 @@ module Netflix
       puts "Go to browser, a page has been opened to establish oauth"
       printf "Pin from Netflix:"
       pin = gets.chomp
-      access_token = request_token.get_access_token(:oauth_verifier => pin)
+      request_token.get_access_token(:oauth_verifier => pin)
     end
     
     def oauth_via_callback(callback_url)
@@ -53,10 +51,11 @@ module Netflix
     end
     
     def handle_oauth_callback(request_token, oauth_verifier)
-      access_token = request_token.get_access_token(:oauth_verifier => oauth_verifier)
+      request_token.get_access_token(:oauth_verifier => oauth_verifier)
     end
     
     private
+
     def oauth_access_token(user_access_token, user_access_secret)
       OAuth::AccessToken.new(@oauth_consumer, user_access_token, user_access_secret)
     end

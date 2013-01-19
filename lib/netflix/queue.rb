@@ -14,17 +14,11 @@ module Netflix
       @type = type
       super(retrieve)
     end
-    
-    #def queue_items
-    #  queue_items = [queue_item].flatten
-    #  queue_items.map {|queue_item| Disc.new(queue_item)}
-    #end
-    
+
     def add(title_ref, position=nil)
       response = @oauth_access_token.post "/users/#{@user_id}/queues/#{@type}?output=json", {:etag => etag, :title_ref => title_ref, :position=> position}
-      #@map = retrieve
-      #netflix is wacky. GET after an add can be STALE. ughg
-      #so recreate the contents programattically instead
+      # netflix is wacky. GET after an add can be STALE. ughg
+      # so recreate the contents programattically instead
       response_obj = JSON.parse(response.body)
       new_queue_item = response_obj["status"]["resources_created"]["queue_item"]
       new_etag = response_obj["status"]["etag"]
@@ -34,14 +28,14 @@ module Netflix
     
     def remove(position)
       id = discs[position-1].id
-      response = @oauth_access_token.delete "#{id}?output=json"
+      @oauth_access_token.delete "#{id}?output=json"
       @map = retrieve
       self
     end
     
     def remove_by_title_ref(title_ref)
       disc = discs.find {|disc| disc =~ /\/#{title_ref}\//}
-      response = @oauth_access_token.delete "#{disc.id}?output=json"
+      @oauth_access_token.delete "#{disc.id}?output=json"
       @map = retrieve
       self
     end
@@ -61,6 +55,7 @@ module Netflix
     end
     
     private
+
     def retrieve(etag = nil)
       url = "/users/#{@user_id}/queues/#{@type}/available?max_results=#{MAX_RESULTS}&output=json"
       if (etag)
@@ -86,6 +81,5 @@ module Netflix
         @map["queue_item"] = [new_queue_item]
       end
     end
-  
   end
 end
