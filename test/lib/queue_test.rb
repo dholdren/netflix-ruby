@@ -1,90 +1,92 @@
-require (File.dirname(File.realdirpath(__FILE__)) + '/../test_helper.rb')
+require File.dirname(File.realdirpath(__FILE__)) + '/../test_helper.rb'
 
-class QueueTest < Test::Unit::TestCase
-  def setup
-    FakeNetflix.stub_netflix_for_user('nuid_one')
-    FakeNetflix.stub_netflix_for_user('nuid_sub1')
+describe Netflix::Queue do
+  before do
+    FakeNetflix.stub_netflix_for_user(user_id)
     Netflix::Client.consumer_key = 'foo_consumer_key'
     Netflix::Client.consumer_secret = 'foo_consumer_secret'
   end
-  
-  def test_get_available_disc_queue
-    user = Netflix::Client.new('nuid_access_key', 'nuid_access_secret').user('nuid_one')
-    available_disc_queue = user.available_disc_queue
-    assert available_disc_queue
+
+  let(:user_id) { 'nuid_one' }
+  let(:queue) { Netflix::Client.new('nuid_access_key', 'nuid_access_secret').user(user_id).available_disc_queue }
+
+  describe '#discs' do
+    it 'returns an Array of discs' do
+      queue.discs.wont_be_empty
+      queue.discs.all? { |disc| disc.is_a?(Netflix::Disc).must_equal(true) }
+    end
+
+    it 'returns the correct discs' do
+      queue.discs.first.id.must_equal('http://api-public.netflix.com/users/nuid_one/queues/disc/available/1/70167072')
+    end
   end
-  
-  def test_get_discs
-    user = Netflix::Client.new('nuid_access_key', 'nuid_access_secret').user('nuid_one')
-    available_disc_queue = user.available_disc_queue
-    assert available_disc_queue
-    discs = available_disc_queue.discs
-    assert discs
-    assert_equal 3, discs.size
-    disc_one = discs[0]
-    assert_equal "http://api-public.netflix.com/users/nuid_one/queues/disc/available/1/70167072", disc_one.id
-    assert_equal "Arthur", disc_one.title
+
+  describe '#add' do
+    let(:new_movie_id) { '70071613' }
+    let(:new_disc_url) { "http://api-public.netflix.com/catalog/titles/movies/#{new_movie_id}" }
+
+    context 'without a position parameter' do
+      it 'enqueues the disc' do
+        queue.discs.size.must_equal(3)
+
+        new_queue = queue.add(new_disc_url)
+
+        new_queue.discs.size.must_equal(4)
+        new_queue.discs[3].id.must_match(%r|#{new_movie_id}$|)
+      end
+
+      it 'updates the etag' do
+        queue.etag.must_equal('115673854498')
+
+        new_queue = queue.add(new_disc_url)
+
+        new_queue.etag.must_equal('82198468425')
+      end
+    end
+
+    context 'with a position parameter' do
+      let(:user_id) { 'nuid_sub1' }
+      let(:new_movie_id) { '70167072' }
+
+      it 'places the new disc at the given position' do
+        queue.discs.size.must_equal(3)
+
+        new_queue = queue.add(new_disc_url, 1)
+
+        new_queue.discs.size.must_equal(4)
+        new_queue.discs[0].id.must_match(%r|#{new_movie_id}$|)
+      end
+    end
   end
-  
-  def test_add_item_to_queue_end_the_default
-    user = Netflix::Client.new('nuid_access_key', 'nuid_access_secret').user('nuid_one')
-    available_disc_queue = user.available_disc_queue
-    assert available_disc_queue
-    #pre tests
-    assert_equal "http://api-public.netflix.com/users/nuid_one/queues/disc/available/1/70167072", available_disc_queue.discs[0].id
-    assert_equal "http://api-public.netflix.com/users/nuid_one/queues/disc/available/2/70142826", available_disc_queue.discs[1].id
-    assert_equal "http://api-public.netflix.com/users/nuid_one/queues/disc/available/3/70108988", available_disc_queue.discs[2].id
-    assert_equal "115673854498", available_disc_queue.etag
-    #operation and tests
-    new_queue = available_disc_queue.add("http://api-public.netflix.com/catalog/titles/movies/70071613")
-    assert_equal "http://api-public.netflix.com/users/nuid_one/queues/disc/available/1/70167072", new_queue.discs[0].id
-    assert_equal "http://api-public.netflix.com/users/nuid_one/queues/disc/available/2/70142826", new_queue.discs[1].id
-    assert_equal "http://api-public.netflix.com/users/nuid_one/queues/disc/available/3/70108988", new_queue.discs[2].id
-    assert_equal "http://api-public.netflix.com/users/nuid_one/queues/disc/available/4/70071613", new_queue.discs[3].id
-    assert_equal "1", new_queue.discs[0].instance_variable_get(:@map)["position"]
-    assert_equal "2", new_queue.discs[1].instance_variable_get(:@map)["position"]
-    assert_equal "3", new_queue.discs[2].instance_variable_get(:@map)["position"]
-    assert_equal "4", new_queue.discs[3].instance_variable_get(:@map)["position"]
-    assert_equal "82198468425", new_queue.etag
+
+  describe '#remove' do
+    it 'does not raise an exception' do
+      queue.remove(2)
+    end
+
+    context 'when the item to remove ist not in the list' do
+      let(:response_body) {
+        <<-JSON
+        {"status": {
+           "message": "Title is not in Queue",
+           "status_code": 404,
+           "sub_code": 610
+          }
+        }
+        JSON
+      }
+
+      let(:request_url) { %r|http://api-public\.netflix\.com/users/nuid_one/queues/disc/available| }
+
+      before do
+        FakeWeb.register_uri(:delete, request_url, :body => response_body, :status => ['404', 'Not Found'])
+      end
+
+      it 'does not raise an exception' do
+        Proc.new do
+          queue.remove(2)
+        end.must_raise(Netflix::Error::NotFound)
+      end
+    end
   end
-  
-  def test_add_item_to_queue_top
-    user = Netflix::Client.new('nuid_access_key', 'nuid_access_secret').user('nuid_sub1')
-    available_disc_queue = user.available_disc_queue
-    assert available_disc_queue
-    #pre tests
-    assert_equal "http://api-public.netflix.com/users/nuid_sub1/queues/disc/available/1/70071613", available_disc_queue.discs[0].id
-    assert_equal "http://api-public.netflix.com/users/nuid_sub1/queues/disc/available/2/70117306", available_disc_queue.discs[1].id
-    assert_equal "http://api-public.netflix.com/users/nuid_sub1/queues/disc/available/3/70105135", available_disc_queue.discs[2].id
-    assert_equal "115673854498", available_disc_queue.etag
-    #operation and tests
-    new_queue = available_disc_queue.add("http://api-public.netflix.com/catalog/titles/movies/70167072", 1)
-    assert_equal "http://api-public.netflix.com/users/nuid_sub1/queues/disc/available/1/70167072", new_queue.discs[0].id
-    assert_equal "http://api-public.netflix.com/users/nuid_sub1/queues/disc/available/2/70071613", new_queue.discs[1].id
-    assert_equal "http://api-public.netflix.com/users/nuid_sub1/queues/disc/available/3/70117306", new_queue.discs[2].id
-    assert_equal "http://api-public.netflix.com/users/nuid_sub1/queues/disc/available/4/70105135", new_queue.discs[3].id
-    assert_equal "1", new_queue.discs[0].instance_variable_get(:@map)["position"]
-    assert_equal "2", new_queue.discs[1].instance_variable_get(:@map)["position"]
-    assert_equal "3", new_queue.discs[2].instance_variable_get(:@map)["position"]
-    assert_equal "4", new_queue.discs[3].instance_variable_get(:@map)["position"]
-    assert_equal "82198468425", new_queue.etag
-  end
-  
-  def test_remove_item_from_queue_by_index
-    user = Netflix::Client.new('nuid_access_key', 'nuid_access_secret').user('nuid_one')
-    available_disc_queue = user.available_disc_queue
-    assert available_disc_queue
-    available_disc_queue.remove(2)
-  end
-  
-  def test_empty_queue
-    FakeNetflix.stub_netflix_for_user('empty_queue')
-    user = Netflix::Client.new('nuid_access_key', 'nuid_access_secret').user('empty_queue')
-    available_disc_queue = user.available_disc_queue
-    assert available_disc_queue, "Expected a disc_queue"
-    assert available_disc_queue.discs, "Expected the disc_queue to have a discs attribute"
-    assert_equal 0, available_disc_queue.discs.size, "Expected discs to be empty array #{available_disc_queue.discs[0]}}"
-    new_queue = available_disc_queue.add("http://api-public.netflix.com/catalog/titles/movies/70167072")
-  end
-  
 end
