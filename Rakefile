@@ -4,12 +4,14 @@ require File.join(File.dirname(__FILE__), 'test/integration/rake_test_helper')
 lib = File.expand_path('../lib/', __FILE__)
 $:.unshift lib unless $:.include?(lib)
 
+task :default => [:test]
+
 Rake::TestTask.new("test:unit") { |t|
   t.libs << 'test'
   t.test_files = Dir.glob( "test/lib/*_test.rb" ).sort
 
-  t.verbose = true
-  t.warning = true
+  t.verbose = false
+  t.warning = false
 }
 
 file "test/integration/oauth_settings.yml" do |t|
