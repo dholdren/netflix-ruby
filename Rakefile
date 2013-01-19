@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
 require 'rake/testtask'
+require File.join(File.dirname(__FILE__), 'test/integration/rake_test_helper')
 lib = File.expand_path('../lib/', __FILE__)
 $:.unshift lib unless $:.include?(lib)
 
 Rake::TestTask.new("test:unit") { |t|
   t.libs << 'test'
-  t.test_files = Dir.glob( "test/*_test.rb" ).sort
+  t.test_files = Dir.glob( "test/lib/*_test.rb" ).sort
 
   t.verbose = true
   t.warning = true
 }
-require File.join(File.dirname(__FILE__), 'test/integration/rake_test_helper')
 
 file "test/integration/oauth_settings.yml" do |t|
   credentials = IntegrationTestHelper.obtain_credentials

@@ -34,7 +34,6 @@ module Netflix
     
     def remove(position)
       id = discs[position-1].id
-      #response = @oauth_access_token.delete "/users/#{@user_id}/queues/#{@type}/available/#{position}?output=json" , {'etag' => etag}
       response = @oauth_access_token.delete "#{id}?output=json"
       @map = retrieve
       self

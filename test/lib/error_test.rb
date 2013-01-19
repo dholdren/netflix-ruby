@@ -1,13 +1,13 @@
-require 'test_helper'
+require (File.dirname(File.realdirpath(__FILE__)) + '/../test_helper.rb')
 
 class ErrorTest < Test::Unit::TestCase
   def setup
-    stub_netflix_for_user('nuid_one')
+    FakeNetflix.stub_netflix_for_user('nuid_one')
   end
   
   def test_handle_404_on_delete
     #add to disc queue
-    FakeWeb.register_uri(:delete, %r|http://api\.netflix\.com/users/nuid_one/queues/disc/available|,
+    FakeWeb.register_uri(:delete, %r|http://api-public\.netflix\.com/users/nuid_one/queues/disc/available|,
                          :body => '{"status": {
                            "message": "Title is not in Queue",
                            "status_code": 404,
@@ -21,7 +21,5 @@ class ErrorTest < Test::Unit::TestCase
     assert_raises(Netflix::Error::NotFound) do
       available_disc_queue.remove(2)
     end
-
   end
 end
-  
