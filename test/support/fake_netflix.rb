@@ -22,11 +22,5 @@ class FakeNetflix
       ).to_return(
         :body => @netflix_queue_responses[netflix_user_id]['post']['body']
       )
-
-      WebMock.stub_request(
-        :delete, %r|http://api-public\.netflix\.com/users/#{netflix_user_id}/queues/disc/available|
-      ).to_return(
-        :body => @netflix_queue_responses[netflix_user_id]['delete']['body']
-      )
     end
 end

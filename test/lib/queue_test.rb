@@ -61,7 +61,12 @@ describe Netflix::Queue do
 
   describe '#remove' do
     it 'makes the request to remove the disc' do
+      disc_for_removal_id = queue.discs[1].id
+      delete_stub = stub_request(:delete, %r{#{disc_for_removal_id}.*})
+
       queue.remove(2)
+
+      assert_requested(delete_stub)
     end
 
     context 'when the item to remove ist not in the list' do
