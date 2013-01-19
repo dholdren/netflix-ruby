@@ -60,7 +60,7 @@ describe Netflix::Queue do
   end
 
   describe '#remove' do
-    it 'does not raise an exception' do
+    it 'makes the request to remove the disc' do
       queue.remove(2)
     end
 
@@ -75,11 +75,10 @@ describe Netflix::Queue do
         }
         JSON
       }
-
       let(:request_url) { %r|http://api-public\.netflix\.com/users/nuid_one/queues/disc/available| }
 
       before do
-        FakeWeb.register_uri(:delete, request_url, :body => response_body, :status => ['404', 'Not Found'])
+        WebMock.stub_request(:delete, request_url).to_return(:body => response_body, :status => ['404', 'Not Found'])
       end
 
       it 'does not raise an exception' do
