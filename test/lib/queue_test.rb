@@ -49,11 +49,29 @@ describe Netflix::Queue do
       let(:new_movie_id) { '70167072' }
 
       it 'places the new disc at the given position' do
+        addition_stub = stub_request(:post, %r{.*users/#{user_id}.*}).with(
+          :body => hash_including(
+            :title_ref => new_disc_url,
+            :position => '2'
+          )
+        ).to_return{
+          response_collection = YAML.load_file(File.expand_path(File.join(File.dirname(__FILE__), "..",  "http_fixtures", "netflix_queue_responses.yml")))
+          {:body => response_collection[user_id]['post']['body']}
+        }
+
+        queue.add(new_disc_url, 2)
+
+        assert_requested(addition_stub)
+      end
+
+      it 'returns a updated queue' do
         queue.discs.size.must_equal(3)
+        old_etag = queue.etag
 
         new_queue = queue.add(new_disc_url, 1)
 
         new_queue.discs.size.must_equal(4)
+        new_queue.etag.wont_equal(old_etag)
         new_queue.discs[0].id.must_match(%r|#{new_movie_id}$|)
       end
     end
