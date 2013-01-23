@@ -1,3 +1,4 @@
 pkg/
 .idea
 .rvmrc
+Gemfile.lock
