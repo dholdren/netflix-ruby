@@ -8,11 +8,12 @@ module Netflix
     
     define_getter :etag, :queue_item
     
-    def initialize(oauth_access_token, user_id, type=TYPE_DISC)
+    def initialize(oauth_access_token, user_id, type=TYPE_DISC, options={})
       @oauth_access_token = oauth_access_token
       @user_id = user_id
       @type = type
-      super(retrieve)
+      @options = options.merge(:etag => nil)
+      super(retrieve(@options))
     end
     
     #def queue_items
@@ -57,15 +58,20 @@ module Netflix
     end
     
     def refresh
-      @map = retrieve(etag)
+      @map = retrieve(@options.merge(:tag => etag))
       self
     end
     
     private
-    def retrieve(etag = nil)
-      url = "/users/#{@user_id}/queues/#{@type}/available?max_results=#{MAX_RESULTS}&output=json"
-      if (etag)
-        response = @oauth_access_token.get(url, { 'etag' => etag.to_s })
+    def retrieve(options = {})
+      @expanded    = "&expand=#{options[:include].join(',')}" if options[:include]
+      @max_results = options[:max_results] ? options[:max_results] : MAX_RESULTS
+
+      url = "/users/#{@user_id}/queues/#{@type}/available?max_results=#{@max_results}&output=json#{@expanded}"
+      puts url
+
+      if (options[:etag])
+        response = @oauth_access_token.get(url, { 'etag' => options[:etag].to_s })
       else
         response = @oauth_access_token.get(url)
       end
