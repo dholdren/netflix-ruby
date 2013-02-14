@@ -36,7 +36,12 @@ class QueueTest < Test::Unit::TestCase
   
   def test_get_available_disc_queue
     available_disc_queue = @user.available_disc_queue
-    assert available_disc_queue, "Expecting user to have a disc_queue"
+    assert available_disc_queue, "Expecting user to have an available disc_queue"
+  end
+
+  def test_get_instant_disc_queue
+    instant_disc_queue = @user.instant_disc_queue
+    assert instant_disc_queue, "Expecting user to have an instant disc_queue"
   end
   
   def test_get_discs_add_and_remove
