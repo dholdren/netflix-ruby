@@ -33,6 +33,8 @@ task "test:integration" => "test/integration/oauth_settings.yml"
 desc "run unit tests only"
 task :test => "test:unit"
 
+task :default => "test:integration"
+
 # Gem tasks
 require "netflix/version"
  
