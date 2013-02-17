@@ -46,15 +46,6 @@ This will provide you with a "consumer key", "consumer secret", and "application
     puts "#{disc_one.title} #{disc_one.id}"
     queue.remove(1) #queue is 1-based, so this is first disc
 
-=== ToDo
-  * Move test suit to MiniTestSpec
-  * Remove commented out code pieces
-  * Make comments obsolete and remove them
-  * Decouple tests for resources form oauth implementation
-  * Make Netflix::Queue.add test that the position paramter is being used
-  * Add support for more resources
-  * Add support for more attributes on existing resources
-
 === Credits
 This work is based on: REST API documentation of Netflix (http://developer.netflix.com),
 with some help from twitter gem for OAuth ideas https://github.com/jnunemaker/twitter/
