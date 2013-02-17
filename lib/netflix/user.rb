@@ -13,7 +13,11 @@ module Netflix
     def available_disc_queue
       @available_disc_queue ||= Queue.new(@oauth_access_token, user_id, Queue::TYPE_DISC)
     end
-    
+
+    def recommendations
+      RecommendationsList.new(@oauth_access_token, user_id)
+    end
+
     private
 
     def retrieve

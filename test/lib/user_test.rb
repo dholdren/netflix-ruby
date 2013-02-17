@@ -9,11 +9,11 @@ describe Netflix::User do
 
   let(:user_id) { 'nuid_one' }
   let(:client) { Netflix::Client.new('nuid_access_key', 'nuid_access_secret') }
+  let(:user) { client.user(user_id) }
 
   describe 'initialization' do
     context 'retrieving the main user' do
       it 'populates the user attributes' do
-        user = client.user('nuid_one')
         user.first_name.must_equal('Jane')
         user.last_name.must_equal('Smith')
         user.can_instant_watch.must_equal(true)
@@ -26,7 +26,6 @@ describe Netflix::User do
       let(:user_id) { 'nuid_sub1' }
 
       it 'populates the user attributes' do
-        user = client.user(user_id)
         user.first_name.must_equal('John')
         user.user_id.must_equal(user_id)
       end
@@ -34,10 +33,24 @@ describe Netflix::User do
   end
 
   describe '#available_disc_queue' do
-    it 'returns a Netflix queue' do
-      user = client.user('nuid_one')
-      available_disc_queue = user.available_disc_queue
-      available_disc_queue.must_be_instance_of(Netflix::Queue)
+    it 'returns a list containing the users discs' do
+      queue = user.available_disc_queue
+      queue.discs.wont_be_empty
+      queue.discs.each do |disc|
+        disc.must_be_instance_of(Netflix::Disc)
+      end
+    end
+  end
+
+  describe '#recommendations' do
+    before { FakeNetflix.stub_netflix_for_user(user_id) }
+
+    it 'returns a list containing the user recommendation' do
+      recommendations = user.recommendations
+      recommendations.wont_be_empty
+      recommendations.each do |recommendation|
+        recommendation.must_be_instance_of(Netflix::Recommendation)
+      end
     end
   end
 end
