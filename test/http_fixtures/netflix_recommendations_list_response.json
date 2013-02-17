@@ -1,0 +1,377 @@
+{"recommendations": {
+  "number_of_results": 287,
+  "recommendation": [
+    {
+      "average_rating": 4.1,
+      "box_art": {
+        "large": "http://cdn-9.nflximg.com/us/boxshots/large/70143819.jpg",
+        "medium": "http://cdn-9.nflximg.com/us/boxshots/small/70143819.jpg",
+        "small": "http://cdn-9.nflximg.com/us/boxshots/tiny/70143819.jpg"
+      },
+      "category": [
+        {
+          "label": "TV-MA",
+          "scheme": "http://api-public.netflix.com/categories/tv_ratings",
+          "term": "TV-MA"
+        },
+        {
+          "label": "Television",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "Television"
+        },
+        {
+          "label": "TV Crime Dramas",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "TV Crime Dramas"
+        },
+        {
+          "label": "TV Dramas",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "TV Dramas"
+        }
+      ],
+      "id": "http://api-public.netflix.com/users/T1vG0i2Pe3G87je7.38f7KxFrYQlYUWHu14iichfHx_RI-/recommendations/70143819",
+      "link": [
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/series/70143819",
+          "rel": "http://schemas.netflix.com/catalog/title",
+          "title": "The Sopranos"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/series/70143819/synopsis",
+          "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+          "title": "synopsis"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/series/70143819/cast",
+          "rel": "http://schemas.netflix.com/catalog/people.cast",
+          "title": "cast"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/series/70143819/format_availability",
+          "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+          "title": "formats"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/series/70143819/screen_formats",
+          "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+          "title": "screen formats"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/series/70143819/languages_and_audio",
+          "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+          "title": "languages and audio"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/series/70143819/discs",
+          "rel": "http://schemas.netflix.com/catalog/titles.discs",
+          "title": "discs"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/series/70143819/similars",
+          "rel": "http://schemas.netflix.com/catalog/titles.similars",
+          "title": "similars"
+        },
+        {
+          "href": "http://www.netflix.com/Movie/The_Sopranos/70143819",
+          "rel": "alternate",
+          "title": "web page"
+        }
+      ],
+      "predicted_rating": 4.5,
+      "release_year": 1999,
+      "title": {
+        "regular": "The Sopranos",
+        "short": "The Sopranos"
+      }
+    },
+    {
+      "average_rating": 3.7,
+      "box_art": {
+        "large": "http://cdn-6.nflximg.com/us/boxshots/large/60031296.jpg",
+        "medium": "http://cdn-6.nflximg.com/us/boxshots/small/60031296.jpg",
+        "small": "http://cdn-6.nflximg.com/us/boxshots/tiny/60031296.jpg"
+      },
+      "category": [
+        {
+          "label": "PG-13",
+          "scheme": "http://api-public.netflix.com/categories/mpaa_ratings",
+          "term": "PG-13"
+        },
+        {
+          "label": "Documentary",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "Documentary"
+        },
+        {
+          "label": "Biographical Documentaries",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "Biographical Documentaries"
+        },
+        {
+          "label": "Military Documentaries",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "Military Documentaries"
+        },
+        {
+          "label": "Political Documentaries",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "Political Documentaries"
+        }
+      ],
+      "id": "http://api-public.netflix.com/users/T1vG0i2Pe3G87je7.38f7KxFrYQlYUWHu14iichfHx_RI-/recommendations/60031296",
+      "link": [
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/60031296",
+          "rel": "http://schemas.netflix.com/catalog/title",
+          "title": "The Fog of War"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/60031296/synopsis",
+          "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+          "title": "synopsis"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/60031296/cast",
+          "rel": "http://schemas.netflix.com/catalog/people.cast",
+          "title": "cast"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/60031296/directors",
+          "rel": "http://schemas.netflix.com/catalog/people.directors",
+          "title": "directors"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/60031296/format_availability",
+          "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+          "title": "formats"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/60031296/awards",
+          "rel": "http://schemas.netflix.com/catalog/titles/awards",
+          "title": "awards"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/60031296/screen_formats",
+          "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+          "title": "screen formats"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/60031296/languages_and_audio",
+          "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+          "title": "languages and audio"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/60031296/similars",
+          "rel": "http://schemas.netflix.com/catalog/titles.similars",
+          "title": "similars"
+        },
+        {
+          "href": "http://www.netflix.com/Movie/The_Fog_of_War/60031296",
+          "rel": "alternate",
+          "title": "web page"
+        }
+      ],
+      "predicted_rating": 4.4,
+      "release_year": 2003,
+      "runtime": 6420,
+      "title": {
+        "regular": "The Fog of War",
+        "short": "The Fog of War"
+      }
+    },
+    {
+      "average_rating": 4,
+      "box_art": {
+        "large": "http://cdn-5.nflximg.com/us/boxshots/large/70139555.jpg",
+        "medium": "http://cdn-5.nflximg.com/us/boxshots/small/70139555.jpg",
+        "small": "http://cdn-5.nflximg.com/us/boxshots/tiny/70139555.jpg"
+      },
+      "category": [
+        {
+          "label": "PG-13",
+          "scheme": "http://api-public.netflix.com/categories/mpaa_ratings",
+          "term": "PG-13"
+        },
+        {
+          "label": "Documentary",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "Documentary"
+        },
+        {
+          "label": "Political Documentaries",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "Political Documentaries"
+        },
+        {
+          "label": "Social & Cultural Documentaries",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "Social & Cultural Documentaries"
+        }
+      ],
+      "id": "http://api-public.netflix.com/users/T1vG0i2Pe3G87je7.38f7KxFrYQlYUWHu14iichfHx_RI-/recommendations/70139555",
+      "link": [
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70139555",
+          "rel": "http://schemas.netflix.com/catalog/title",
+          "title": "Inside Job"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70139555/synopsis",
+          "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+          "title": "synopsis"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70139555/cast",
+          "rel": "http://schemas.netflix.com/catalog/people.cast",
+          "title": "cast"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70139555/directors",
+          "rel": "http://schemas.netflix.com/catalog/people.directors",
+          "title": "directors"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70139555/format_availability",
+          "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+          "title": "formats"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70139555/awards",
+          "rel": "http://schemas.netflix.com/catalog/titles/awards",
+          "title": "awards"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70139555/screen_formats",
+          "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+          "title": "screen formats"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70139555/languages_and_audio",
+          "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+          "title": "languages and audio"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70139555/similars",
+          "rel": "http://schemas.netflix.com/catalog/titles.similars",
+          "title": "similars"
+        },
+        {
+          "href": "http://www.netflix.com/Movie/Inside_Job/70139555",
+          "rel": "alternate",
+          "title": "web page"
+        }
+      ],
+      "predicted_rating": 4.4,
+      "release_year": 2010,
+      "runtime": 6480,
+      "title": {
+        "regular": "Inside Job",
+        "short": "Inside Job"
+      }
+    },
+    {
+      "average_rating": 4.1,
+      "box_art": {
+        "large": "http://cdn-5.nflximg.com/us/boxshots/large/70075465.jpg",
+        "medium": "http://cdn-5.nflximg.com/us/boxshots/small/70075465.jpg",
+        "small": "http://cdn-5.nflximg.com/us/boxshots/tiny/70075465.jpg"
+      },
+      "category": [
+        {
+          "label": "PG",
+          "scheme": "http://api-public.netflix.com/categories/mpaa_ratings",
+          "term": "PG"
+        },
+        {
+          "label": "Foreign",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "Foreign"
+        },
+        {
+          "label": "Foreign Art House",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "Foreign Art House"
+        },
+        {
+          "label": "Foreign Dramas",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "Foreign Dramas"
+        },
+        {
+          "label": "France",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "France"
+        },
+        {
+          "label": "French Language",
+          "scheme": "http://api-public.netflix.com/categories/genres",
+          "term": "French Language"
+        }
+      ],
+      "id": "http://api-public.netflix.com/users/T1vG0i2Pe3G87je7.38f7KxFrYQlYUWHu14iichfHx_RI-/recommendations/70075465",
+      "link": [
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70075465",
+          "rel": "http://schemas.netflix.com/catalog/title",
+          "title": "Jean de Florette / Manon of the Spring"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70075465/synopsis",
+          "rel": "http://schemas.netflix.com/catalog/titles/synopsis",
+          "title": "synopsis"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70075465/cast",
+          "rel": "http://schemas.netflix.com/catalog/people.cast",
+          "title": "cast"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70075465/directors",
+          "rel": "http://schemas.netflix.com/catalog/people.directors",
+          "title": "directors"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70075465/format_availability",
+          "rel": "http://schemas.netflix.com/catalog/titles/format_availability",
+          "title": "formats"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70075465/awards",
+          "rel": "http://schemas.netflix.com/catalog/titles/awards",
+          "title": "awards"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70075465/screen_formats",
+          "rel": "http://schemas.netflix.com/catalog/titles/screen_formats",
+          "title": "screen formats"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70075465/languages_and_audio",
+          "rel": "http://schemas.netflix.com/catalog/titles/languages_and_audio",
+          "title": "languages and audio"
+        },
+        {
+          "href": "http://api-public.netflix.com/catalog/titles/movies/70075465/similars",
+          "rel": "http://schemas.netflix.com/catalog/titles.similars",
+          "title": "similars"
+        },
+        {
+          "href": "http://www.netflix.com/Movie/Jean_de_Florette_Manon_of_the_Spring/70075465",
+          "rel": "alternate",
+          "title": "web page"
+        }
+      ],
+      "predicted_rating": 4.3,
+      "release_year": 1986,
+      "runtime": 14040,
+      "title": {
+        "regular": "Jean de Florette / Manon of the Spring",
+        "short": "Jean de Florette / Manon of the Spring"
+      }
+    }
+  ],
+  "results_per_page": 5,
+  "start_index": 0,
+  "url_template": "http://api-public.netflix.com/users/T1vG0i2Pe3G87je7.38f7KxFrYQlYUWHu14iichfHx_RI-/recommendations?{-join|&|start_index|max_results}"
+}}
