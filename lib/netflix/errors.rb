@@ -17,6 +17,9 @@ module Netflix
     #5xx level errors
     class ServerError < ResponseError
     end
+    #503 API Temporarily Unavailable
+    class Maintenance < ServerError
+    end
     #400
     class BadRequest < ClientError
     end
@@ -33,7 +36,7 @@ module Netflix
     class RateLimit < ClientError
     end
     
-    CODEMAP = {400 => BadRequest, 403 => Forbidden, 404 => NotFound, 401 => Unauthorized, 420 => RateLimit}
+    CODEMAP = {400 => BadRequest, 403 => Forbidden, 404 => NotFound, 401 => Unauthorized, 420 => RateLimit, 503 => Maintenance}
     def self.for(response)
       #codemap = {400 => BadRequest, 403 => Forbidden, 404 => NotFound, 401 => Unauthorized, 420 => RateLimit}
       code = response.code.to_i
