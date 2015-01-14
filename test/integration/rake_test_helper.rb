@@ -14,8 +14,8 @@ class IntegrationTestHelper
       puts "Launching netflix oauth page, login to TEST account and allow this application"
       oauth_consumer = OAuth::Consumer.new(consumer_key, consumer_secret,
         :site => "http://api.netflix.com", 
-        :request_token_url => "http://api.netflix.com/oauth/request_token", 
-        :access_token_url => "http://api.netflix.com/oauth/access_token", 
+        :request_token_url => "http://api-public.netflix.com/oauth/request_token", 
+        :access_token_url => "http://api-public.netflix.com/oauth/access_token", 
         :authorize_url => "https://api-user.netflix.com/oauth/login")
       request_token = oauth_consumer.get_request_token
       authorize_url = request_token.authorize_url(:oauth_consumer_key => consumer_key)

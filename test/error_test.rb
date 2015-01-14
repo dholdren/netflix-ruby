@@ -7,7 +7,7 @@ class ErrorTest < Test::Unit::TestCase
   
   def test_handle_404_on_delete
     #add to disc queue
-    FakeWeb.register_uri(:delete, %r|http://api\.netflix\.com/users/nuid_one/queues/disc/available|,
+    FakeWeb.register_uri(:delete, %r|http://api-public\.netflix\.com/users/nuid_one/queues/disc/available|,
                          :body => '{"status": {
                            "message": "Title is not in Queue",
                            "status_code": 404,
