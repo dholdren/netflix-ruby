@@ -20,9 +20,10 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/dholdren/netflix-ruby"
   s.has_rdoc = false
   
-  s.add_dependency("oauth")
-  s.add_dependency("json")
-  s.add_dependency("launchy")
-  s.add_development_dependency("fakeweb")
+  s.add_dependency "oauth", "~> 0.4"
+  s.add_dependency "json",  "~> 1.7"
+  s.add_dependency "launchy", "~> 2.1"
+
+  s.add_development_dependency "fakeweb", "~> 1.3"
 end
 
